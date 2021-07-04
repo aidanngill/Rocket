@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# SpaceWeb
+Front end interface for [Space](https://github.com/ramadan8/Space), a file hosting API.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requirements
+* npm
+* [Space](https://github.com/ramadan8/Space)
 
-## Available Scripts
+## Getting Started
+```bash
+git clone https://github.com/ramadan8/SpaceWeb.git && cd SpaceWeb
+npm i
+```
 
-In the project directory, you can run:
+The following environment variables should be set according to your own Space setup.
 
-### `npm start`
+```bash
+export REACT_APP_NAME="Golf"
+export REACT_APP_DESCRIPTION="The coolest file host ever."
+export REACT_APP_RETURN_URL="https://on.wii.golf"
+export REACT_APP_API_URL="https://api.wii.golf"
+export REACT_APP_REGISTRATION="closed"
+export REACT_APP_SOCIAL_EMAIL="webmaster@wii.golf"
+export REACT_APP_CAPTCHA_KEY="google_recaptcha_key"
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* `REACT_APP_NAME` is the display name of the website, shown in the navbar and titles.
+* `REACT_APP_DESCRIPTION` is the meta description for the website that will show up on modern embeds on other websites.
+* `REACT_APP_RETURN_URL` is the URL at which your files are hosted.
+* `REACT_APP_API_URL` is the API URL for Space.
+* `REACT_APP_REGISTRATION` is whether or not users have to use an invite code to sign up, `closed` will mean that an invite is necessary, whilst `open` (or anything else) will mean the opposite.
+* `REACT_APP_CAPTCHA_KEY` is your Google reCAPTCHA public key. Make sure you *never* put your secret key within this project.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Building
+```bash
+npm run build
+```
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+After building, simply move everything from the `build` folder onto your web server.

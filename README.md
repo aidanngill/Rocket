@@ -1,4 +1,4 @@
-# SpaceWeb
+# Rocket
 Front end interface for [Space](https://github.com/ramadan8/Space), a file hosting API.
 
 ## Requirements
@@ -7,7 +7,7 @@ Front end interface for [Space](https://github.com/ramadan8/Space), a file hosti
 
 ## Getting Started
 ```bash
-git clone https://github.com/ramadan8/SpaceWeb.git && cd SpaceWeb
+git clone https://github.com/ramadan8/Rocket.git && cd Rocket
 npm i
 ```
 
